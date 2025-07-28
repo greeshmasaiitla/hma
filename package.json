@@ -1,0 +1,20 @@
+{
+  "name": "hospital-management-system",
+  "version": "1.0.0",
+  "description": "A comprehensive hospital management system with patient, doctor, and admin dashboards",
+  "main": "backends/server.js",
+  "scripts": {
+    "start": "node backends/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backends && npm start",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backends && npm install && cd ../frontend && npm install"
+  },
+  "keywords": ["hospital", "management", "healthcare", "react", "nodejs", "mongodb"],
+  "author": "Hospital Management Team",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
