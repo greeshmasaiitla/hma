@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const authRoutes = require('./routes/auth');
 
 const patientsRouter = require('./routes/patients');
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration for production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://hospital-management-system.onrender.com', 'http://localhost:3000'] 
+    ? ['https://hospital-backend-z38m.onrender.com', 'http://localhost:3000'] 
     : 'http://localhost:3000',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -55,6 +56,16 @@ app.get('/health', (req, res) => {
   res.json({ status: 'OK', timestamp: new Date().toISOString() });
 });
 
+// Serve static files from the React app build directory
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
+  
+  // Handle React routing, return all requests to React app
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+  });
+}
+
 // Socket.io setup
 const http = require('http');
 const server = http.createServer(app);
@@ -62,7 +73,7 @@ const { Server } = require('socket.io');
 const io = new Server(server, { 
   cors: { 
     origin: process.env.NODE_ENV === 'production' 
-      ? ['https://hospital-management-system.onrender.com', 'http://localhost:3000']
+      ? ['https://hospital-backend-z38m.onrender.com', 'http://localhost:3000']
       : "http://localhost:3000",
     methods: ["GET", "POST"]
   } 
