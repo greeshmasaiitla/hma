@@ -54,6 +54,8 @@ app.get('/health', (req, res) => {
 });
 
 // Serve static files from the React app build directory
+// Commented out since frontend is deployed separately to Vercel
+/*
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../frontend/build')));
   
@@ -62,6 +64,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
   });
 }
+*/
 
 // Socket.io setup
 const http = require('http');
