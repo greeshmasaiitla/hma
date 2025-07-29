@@ -1,0 +1,79 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 30px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 20px 0 10px;
+  font-weight: 600;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+.form-section input,
+.form-section select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: 10px 5px 20px 0;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid #007bff;
+}
+
+.card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+.card strong {
+  color: #007bff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  outline: none;
+}
