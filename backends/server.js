@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5000;
 // CORS configuration for production
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://hma-backend-gyld.onrender.com', 'http://localhost:3000', 'https://*.vercel.app', 'https://*.vercel.app/*'] 
+    ? ['https://hma-backend-gyld.onrender.com', 'http://localhost:3000', 'https://hma-plum.vercel.app', 'https://*.vercel.app'] 
     : 'http://localhost:3000',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -73,7 +73,7 @@ const { Server } = require('socket.io');
 const io = new Server(server, { 
   cors: { 
     origin: process.env.NODE_ENV === 'production' 
-      ? ['https://hma-backend-gyld.onrender.com', 'http://localhost:3000', 'https://*.vercel.app', 'https://*.vercel.app/*']
+      ? ['https://hma-backend-gyld.onrender.com', 'http://localhost:3000', 'https://hma-plum.vercel.app', 'https://*.vercel.app']
       : "http://localhost:3000",
     methods: ["GET", "POST"]
   } 
