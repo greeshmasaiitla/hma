@@ -44,6 +44,11 @@ const Login = () => {
 
   return (
     <div className="login-page">
+      {/* Waiting Room Elements */}
+      <div className="waiting-chairs"></div>
+      <div className="wall-shelf"></div>
+      <div className="sanitizer"></div>
+      
       <div className="login-container">
         <div className="login-form-wrapper">
           <h2 className="login-title">Hospital Management System</h2>
