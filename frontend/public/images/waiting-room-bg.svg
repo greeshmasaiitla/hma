@@ -1,56 +1,73 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
   <!-- Background -->
-  <rect width="800" height="600" fill="#E0F2FE"/>
+  <rect width="800" height="600" fill="#9CA3AF"/>
   
-  <!-- Floor -->
-  <rect x="0" y="500" width="800" height="100" fill="#3B82F6"/>
+  <!-- Desk -->
+  <rect x="150" y="350" width="500" height="150" fill="#F3F4F6"/> <!-- Desk top -->
+  <rect x="150" y="480" width="500" height="30" fill="#B2DFDB"/> <!-- Desk front panel -->
+  <rect x="150" y="350" width="500" height="150" fill="none" stroke="#374151" stroke-width="4"/>
+  <rect x="150" y="480" width="500" height="30" fill="none" stroke="#374151" stroke-width="4"/>
   
-  <!-- Reception Desk -->
-  <rect x="50" y="300" width="250" height="120" fill="#B2DFDB"/>
-  <rect x="50" y="280" width="250" height="30" fill="#F9FAFB"/>
+  <!-- Left Figure - Doctor/Administrator -->
+  <!-- Head -->
+  <circle cx="250" cy="180" r="30" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <!-- Hair -->
+  <rect x="220" y="150" width="60" height="20" fill="#F3E8FF" stroke="#374151" stroke-width="3"/>
+  <!-- Glasses -->
+  <circle cx="240" cy="185" r="8" fill="none" stroke="#374151" stroke-width="3"/>
+  <circle cx="260" cy="185" r="8" fill="none" stroke="#374151" stroke-width="3"/>
+  <line x1="248" y1="185" x2="252" y2="185" stroke="#374151" stroke-width="2"/>
+  <!-- Lab coat -->
+  <rect x="220" y="200" width="60" height="150" fill="#FFFFFF" stroke="#374151" stroke-width="3"/>
+  <!-- Purple shirt -->
+  <rect x="230" y="220" width="40" height="60" fill="#DDD6FE" stroke="#374151" stroke-width="2"/>
+  <!-- Arms -->
+  <rect x="210" y="230" width="20" height="80" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <rect x="270" y="230" width="20" height="80" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <!-- Hands on desk -->
+  <circle cx="235" cy="360" r="12" fill="#FDE68A" stroke="#374151" stroke-width="2"/>
+  <circle cx="265" cy="360" r="12" fill="#FDE68A" stroke="#374151" stroke-width="2"/>
   
-  <!-- Receptionist -->
-  <rect x="100" y="200" width="80" height="120" fill="#F3E8FF"/> <!-- Lab coat -->
-  <rect x="110" y="190" width="60" height="40" fill="#F3E8FF"/> <!-- Lab coat top -->
-  <rect x="115" y="210" width="50" height="60" fill="#DDD6FE"/> <!-- Shirt -->
-  <circle cx="140" cy="180" r="25" fill="#FDE68A"/> <!-- Head -->
-  <rect x="135" y="175" width="10" height="8" fill="#374151"/> <!-- Glasses -->
-  <rect x="120" y="320" width="20" height="30" fill="#374151"/> <!-- Arms -->
-  <rect x="160" y="320" width="20" height="30" fill="#374151"/> <!-- Arms -->
+  <!-- Right Figure - Patient -->
+  <!-- Head -->
+  <circle cx="550" cy="180" r="30" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <!-- Curly hair -->
+  <ellipse cx="550" cy="150" rx="35" ry="25" fill="#F3E8FF" stroke="#374151" stroke-width="3"/>
+  <!-- Concerned expression -->
+  <path d="M 540 175 Q 550 170 560 175" stroke="#374151" stroke-width="2" fill="none"/>
+  <path d="M 540 185 Q 550 180 560 185" stroke="#374151" stroke-width="2" fill="none"/>
+  <!-- White jacket -->
+  <rect x="520" y="200" width="60" height="150" fill="#FFFFFF" stroke="#374151" stroke-width="3"/>
+  <!-- Purple turtleneck -->
+  <rect x="530" y="220" width="40" height="60" fill="#DDD6FE" stroke="#374151" stroke-width="2"/>
+  <!-- Purple pants -->
+  <rect x="525" y="280" width="50" height="120" fill="#DDD6FE" stroke="#374151" stroke-width="3"/>
+  <!-- Arms -->
+  <rect x="510" y="230" width="20" height="80" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <rect x="570" y="230" width="20" height="80" fill="#FDE68A" stroke="#374151" stroke-width="3"/>
+  <!-- Hands on desk -->
+  <circle cx="535" cy="360" r="12" fill="#FDE68A" stroke="#374151" stroke-width="2"/>
+  <circle cx="565" cy="360" r="12" fill="#FDE68A" stroke="#374151" stroke-width="2"/>
   
   <!-- Document on desk -->
-  <rect x="200" y="290" width="60" height="80" fill="#FFFFFF"/>
-  <rect x="205" y="295" width="50" height="3" fill="#374151"/>
-  <rect x="205" y="305" width="50" height="3" fill="#374151"/>
-  <rect x="205" y="315" width="50" height="3" fill="#374151"/>
-  <rect x="205" y="325" width="50" height="3" fill="#374151"/>
+  <rect x="350" y="380" width="80" height="100" fill="#FFFFFF" stroke="#374151" stroke-width="3"/>
+  <!-- Document lines -->
+  <rect x="360" y="395" width="60" height="4" fill="#374151"/>
+  <rect x="360" y="410" width="60" height="4" fill="#374151"/>
+  <rect x="360" y="425" width="60" height="4" fill="#374151"/>
+  <rect x="360" y="440" width="60" height="4" fill="#374151"/>
+  <rect x="360" y="455" width="60" height="4" fill="#374151"/>
   
-  <!-- Stapler -->
-  <circle cx="280" cy="310" r="8" fill="#D1D5DB"/>
+  <!-- Stapler/Small device -->
+  <rect x="450" y="420" width="25" height="15" fill="#D1D5DB" stroke="#374151" stroke-width="2"/>
+  <rect x="452" y="422" width="21" height="11" fill="#9CA3AF"/>
   
-  <!-- Waiting Chair -->
-  <rect x="450" y="350" width="80" height="100" fill="#FFFFFF"/>
-  <rect x="460" y="340" width="60" height="20" fill="#FFFFFF"/> <!-- Chair back -->
+  <!-- Chairs -->
+  <!-- Left chair -->
+  <rect x="200" y="380" width="40" height="80" fill="#F3F4F6" stroke="#374151" stroke-width="3"/>
+  <rect x="190" y="370" width="60" height="20" fill="#F3F4F6" stroke="#374151" stroke-width="3"/>
   
-  <!-- Patient in waiting chair -->
-  <rect x="470" y="200" width="80" height="120" fill="#F3E8FF"/> <!-- Lab coat -->
-  <rect x="480" y="190" width="60" height="40" fill="#F3E8FF"/> <!-- Lab coat top -->
-  <rect x="485" y="210" width="50" height="60" fill="#DDD6FE"/> <!-- Shirt -->
-  <rect x="480" y="270" width="50" height="80" fill="#DDD6FE"/> <!-- Pants -->
-  <circle cx="510" cy="180" r="25" fill="#FDE68A"/> <!-- Head -->
-  <rect x="505" y="175" width="10" height="8" fill="#374151"/> <!-- Glasses -->
-  <rect x="470" y="320" width="20" height="30" fill="#374151"/> <!-- Arms -->
-  <rect x="530" y="320" width="20" height="30" fill="#374151"/> <!-- Arms -->
-  
-  <!-- Wall elements -->
-  <rect x="400" y="150" width="200" height="15" fill="#B2DFDB"/> <!-- Shelf -->
-  <rect x="600" y="120" width="25" height="35" fill="#F9FAFB"/> <!-- Sanitizer -->
-  <rect x="605" y="125" width="15" height="25" fill="#374151"/> <!-- Sanitizer body -->
-  <circle cx="612" cy="130" r="3" fill="#F9FAFB"/> <!-- Sanitizer top -->
-  
-  <!-- Outlines for flat design effect -->
-  <rect x="50" y="300" width="250" height="120" fill="none" stroke="#374151" stroke-width="3"/>
-  <rect x="50" y="280" width="250" height="30" fill="none" stroke="#374151" stroke-width="3"/>
-  <rect x="450" y="350" width="80" height="100" fill="none" stroke="#374151" stroke-width="3"/>
-  <rect x="460" y="340" width="60" height="20" fill="none" stroke="#374151" stroke-width="3"/>
+  <!-- Right chair -->
+  <rect x="560" y="380" width="40" height="80" fill="#F3F4F6" stroke="#374151" stroke-width="3"/>
+  <rect x="550" y="370" width="60" height="20" fill="#F3F4F6" stroke="#374151" stroke-width="3"/>
 </svg>
