@@ -21,6 +21,120 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Login Page Styles with Waiting Room Background */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(16, 185, 129, 0.1) 100%
+  ),
+  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23E0F2FE;stop-opacity:1" /><stop offset="100%" style="stop-color:%23F0FDF4;stop-opacity:1" /></linearGradient></defs><rect width="800" height="600" fill="url(%23bg)"/><rect x="0" y="0" width="320" height="600" fill="%23B2DFDB"/><rect x="320" y="400" width="480" height="200" fill="%234F46E5"/><rect x="40" y="120" width="240" height="60" fill="%23F0FDF4"/><rect x="40" y="180" width="240" height="40" fill="%23E5E7EB"/><rect x="60" y="190" width="40" height="20" fill="%231F2937"/><rect x="120" y="190" width="40" height="20" fill="%231F2937"/><rect x="400" y="200" width="60" height="60" fill="%23F9FAFB"/><rect x="480" y="200" width="60" height="60" fill="%23F9FAFB"/><rect x="560" y="200" width="60" height="60" fill="%23F9FAFB"/><rect x="350" y="150" width="300" height="20" fill="%23B2DFDB"/><rect x="350" y="170" width="300" height="10" fill="%23F9FAFB"/><rect x="360" y="175" width="20" height="10" fill="%231F2937"/><rect x="590" y="175" width="20" height="10" fill="%231F2937"/><rect x="500" y="120" width="40" height="30" fill="%23F9FAFB"/><rect x="505" y="125" width="30" height="20" fill="%231F2937"/><circle cx="520" cy="132" r="3" fill="%23F9FAFB"/></svg>') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.login-form-wrapper {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  color: var(--primary-dark);
+  letter-spacing: 0.5px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background: #fff;
+}
+
+.login-input::placeholder {
+  color: #9CA3AF;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding: 8px 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
 .container {
   max-width: 1100px;
   margin: 0 auto;

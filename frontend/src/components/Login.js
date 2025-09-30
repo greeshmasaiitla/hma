@@ -43,32 +43,36 @@ const Login = () => {
   };
 
   return (
-    <div className="container">
-      <h2 className="section-title">Login</h2>
-      <form onSubmit={handleSubmit} style={{ maxWidth: 340, margin: '0 auto', background: '#f9fafb', borderRadius: 10, padding: 24, boxShadow: '0 2px 12px rgba(30,64,175,0.06)' }}>
-        <label className="form-label" htmlFor="login-username">Username or Email</label>
-        <input
-          id="login-username"
-          type="text"
-          value={usernameOrEmail}
-          onChange={e => setUsernameOrEmail(e.target.value)}
-          placeholder="Enter your username or email"
-          autoComplete="off"
-          style={{ width: '100%', marginBottom: 16, borderRadius: 8, padding: '8px 12px', border: '1px solid #bbb' }}
-        />
-        <label className="form-label" htmlFor="login-password">Password</label>
-        <input
-          id="login-password"
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          placeholder="Enter your password"
-          autoComplete="new-password"
-          style={{ width: '100%', marginBottom: 24, borderRadius: 8, padding: '8px 12px', border: '1px solid #bbb' }}
-        />
-        {error && <div style={{ color: 'red', marginBottom: 12 }}>{error}</div>}
-        <button type="submit" style={{ width: '100%', background: '#2563eb', color: '#fff', border: 'none', borderRadius: 8, padding: '10px 0', fontWeight: 600, fontSize: 16 }}>Login</button>
-      </form>
+    <div className="login-page">
+      <div className="login-container">
+        <div className="login-form-wrapper">
+          <h2 className="login-title">Hospital Management System</h2>
+          <form onSubmit={handleSubmit} className="login-form">
+            <label className="form-label" htmlFor="login-username">Username or Email</label>
+            <input
+              id="login-username"
+              type="text"
+              value={usernameOrEmail}
+              onChange={e => setUsernameOrEmail(e.target.value)}
+              placeholder="Enter your username or email"
+              autoComplete="off"
+              className="login-input"
+            />
+            <label className="form-label" htmlFor="login-password">Password</label>
+            <input
+              id="login-password"
+              type="password"
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              autoComplete="new-password"
+              className="login-input"
+            />
+            {error && <div className="error-message">{error}</div>}
+            <button type="submit" className="login-button">Login</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
